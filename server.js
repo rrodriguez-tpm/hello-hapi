@@ -26,7 +26,7 @@ const init = async () => {
         if (!isHtmlResourceRequest) {
             console.log('');
 
-            const ip = 'remoteAddress: ' + request.info.remoteAddress;
+            let ip = 'remoteAddress: ' + request.info.remoteAddress;
             if (request.headers['x-real-ip'] !== undefined) ip += ', x-real-ip:' + request.headers['x-real-ip'];
             if (request.headers['x-forwarded-for'] !== undefined) ip += ', x-forwarded-for:' + request.headers['x-forwarded-for'];
 
